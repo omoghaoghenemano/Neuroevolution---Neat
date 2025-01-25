@@ -1,7 +1,7 @@
 package de.uni_passau.fim.se2.sbse.neat;
 
-import de.uni_passau.fim.se2.sbse.neat.algorithm.Neuroevolution;
-import de.uni_passau.fim.se2.sbse.neat.chromosome.Agent;
+import de.uni_passau.fim.se2.sbse.neat.algorithms.Neuroevolution;
+import de.uni_passau.fim.se2.sbse.neat.chromosomes.Agent;
 import de.uni_passau.fim.se2.sbse.neat.environments.Environment;
 import de.uni_passau.fim.se2.sbse.neat.environments.SinglePoleBalancing;
 import de.uni_passau.fim.se2.sbse.neat.environments.Tasks;
@@ -79,6 +79,9 @@ public class Main implements Callable<Integer> {
      */
     @Override
     public Integer call() {
+        System.out.printf(
+                "Analysing task '%s' with a population size of %d and a maximum of %d generations over %d repetitions.%n",
+                task, populationSize, maxGenerations, repetitions);
         IntStream.range(0, repetitions).forEach(_ -> solveTask());
         printResults();
 
@@ -123,12 +126,11 @@ public class Main implements Callable<Integer> {
         double maxGenerations = generations.stream().mapToInt(Integer::intValue).max().orElseThrow();
         double minGenerations = generations.stream().mapToInt(Integer::intValue).min().orElseThrow();
         double averageTimeSeconds = times.stream().mapToLong(Long::longValue).average().orElseThrow() / 1000.0;
-        System.out.println("Task: \t\t" + task);
-        System.out.println("Successful repetitions: \t" + successfulRepetitions);
-        System.out.println("Min generations: \t" + minGenerations);
-        System.out.println("Average generations: \t" + averageGenerations);
-        System.out.println("Max generations: \t" + maxGenerations);
-        System.out.println("Average time per task (s): \t" + averageTimeSeconds);
+        System.out.println("Successful repetitions: " + successfulRepetitions);
+        System.out.println("Min generations: " + minGenerations);
+        System.out.println("Average generations: " + averageGenerations);
+        System.out.println("Max generations: " + maxGenerations);
+        System.out.println("Average time per task (s): " + averageTimeSeconds);
     }
 
 

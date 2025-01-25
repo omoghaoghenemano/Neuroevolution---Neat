@@ -1,4 +1,4 @@
-package de.uni_passau.fim.se2.sbse.neat.chromosome;
+package de.uni_passau.fim.se2.sbse.neat.chromosomes;
 
 /**
  * Represents a connection gene that is part of every NEAT chromosome.

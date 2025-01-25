@@ -1,6 +1,6 @@
-package de.uni_passau.fim.se2.sbse.neat.algorithm;
+package de.uni_passau.fim.se2.sbse.neat.algorithms;
 
-import de.uni_passau.fim.se2.sbse.neat.chromosome.Agent;
+import de.uni_passau.fim.se2.sbse.neat.chromosomes.Agent;
 import de.uni_passau.fim.se2.sbse.neat.environments.Environment;
 
 /**

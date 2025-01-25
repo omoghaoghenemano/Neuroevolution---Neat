@@ -1,7 +1,7 @@
 package de.uni_passau.fim.se2.sbse.neat.crossover;
 
 
-import de.uni_passau.fim.se2.sbse.neat.chromosome.NetworkChromosome;
+import de.uni_passau.fim.se2.sbse.neat.chromosomes.NetworkChromosome;
 
 import java.util.*;
 

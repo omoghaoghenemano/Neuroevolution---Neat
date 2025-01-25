@@ -1,4 +1,4 @@
-package de.uni_passau.fim.se2.sbse.neat.algorithm.innovations;
+package de.uni_passau.fim.se2.sbse.neat.algorithms.innovations;
 
 /**
  * Represents an innovation in the NEAT algorithm.

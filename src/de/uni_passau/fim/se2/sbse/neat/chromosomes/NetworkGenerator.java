@@ -1,6 +1,6 @@
-package de.uni_passau.fim.se2.sbse.neat.chromosome;
+package de.uni_passau.fim.se2.sbse.neat.chromosomes;
 
-import de.uni_passau.fim.se2.sbse.neat.algorithm.innovations.Innovation;
+import de.uni_passau.fim.se2.sbse.neat.algorithms.innovations.Innovation;
 
 import java.util.*;
 

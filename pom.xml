@@ -238,13 +238,27 @@
                 <configuration>
                     <outputFormats>XML</outputFormats>
                     <targetClasses>
-
+                        <param>de.uni_passau.fim.se2.sbse.neat.chromosomes.*</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.crossover.*</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.mutation.*</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.utils.*</param>
                     </targetClasses>
                     <excludedClasses>
+                        <param>de.uni_passau.fim.se2.sbse.neat.chromosomes.ActivationFunction</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.chromosomes.Agent</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.chromosomes.NeuronType</param>
 
+                        <param>de.uni_passau.fim.se2.sbse.neat.crossover.Crossover</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.mutation.Mutation</param>
+
+                        <param>de.uni_passau.fim.se2.sbse.neat.utils.Randomness</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.utils.Hyperparameter</param>
                     </excludedClasses>
                     <targetTests>
-
+                        <param>de.uni_passau.fim.se2.sbse.neat.chromosomes.*Test</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.crossover.*Test</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.mutation.*Test</param>
+                        <param>de.uni_passau.fim.se2.sbse.neat.utils.*Test</param>
                     </targetTests>
                 </configuration>
                 <dependencies>

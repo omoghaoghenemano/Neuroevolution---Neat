@@ -8,7 +8,7 @@ import static java.util.Objects.requireNonNull;
 
 import javax.swing.SwingUtilities;
 
-import de.uni_passau.fim.se2.sbse.neat.chromosome.Agent;
+import de.uni_passau.fim.se2.sbse.neat.chromosomes.Agent;
 import de.uni_passau.fim.se2.sbse.neat.environments.visualisation.SinglePoleVisualisation;
 
 /**

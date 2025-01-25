@@ -1,0 +1,6 @@
+Analysing task 'XOR' with a population size of 50 and a maximum of 50 generations over 30 repetitions.
+Successful repetitions: 30
+Min generations: 18.0
+Average generations: 25.733333333333334
+Max generations: 37.0
+Average time per task (s): 0.010933333333333333

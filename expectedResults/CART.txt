@@ -1,0 +1,6 @@
+Analysing task 'CARTPOLE' with a population size of 50 and a maximum of 50 generations over 30 repetitions.
+Successful repetitions: 30
+Min generations: 0.0
+Average generations: 3.533333333333333
+Max generations: 30.0
+Average time per task (s): 0.8387666666666667
