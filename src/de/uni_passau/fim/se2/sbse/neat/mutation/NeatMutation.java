@@ -2,7 +2,6 @@ package de.uni_passau.fim.se2.sbse.neat.mutation;
 
 import de.uni_passau.fim.se2.sbse.neat.algorithms.innovations.Innovation;
 import de.uni_passau.fim.se2.sbse.neat.chromosomes.*;
-import de.uni_passau.fim.se2.sbse.neat.utils.Hyperparameter;
 
 import java.util.Random;
 import java.util.Set;
@@ -67,9 +66,10 @@ public class NeatMutation implements Mutation<NetworkChromosome> {
      * novel innovations for the new connections must be created if the same mutation has not occurred before.
      * If the same innovation has occurred before, the corresponding innovation numbers must be reused.
      *
-     * @param child The network chromosome to which the new neuron and connections will be added.
+     * @param parent The network chromosome to which the new neuron and connections will be added.
+     * @return The mutated network chromosome.
      */
-    private void addNeuron(NetworkChromosome child) {
+    public NetworkChromosome addNeuron(NetworkChromosome parent) {
         throw new UnsupportedOperationException("Implement me!");
     }
 
@@ -86,30 +86,31 @@ public class NeatMutation implements Mutation<NetworkChromosome> {
      * novel innovations for the new connection must be created if the same mutation has not occurred before.
      * If the same innovation has occurred before, the corresponding innovation number must be reused.
      *
-     * @param child The network chromosome to which the new connection will be added.
+     * @param parent The network chromosome to which the new connection will be added.
+     * @return The mutated network chromosome.
      */
-    private void addConnection(NetworkChromosome child) {
+    public NetworkChromosome addConnection(NetworkChromosome parent) {
         throw new UnsupportedOperationException("Implement me!");
     }
 
     /**
      * Mutates the weights of the connections in the given network chromosome.
-     * The weight of each connection is mutated with a probability of {@link Hyperparameter#WEIGHT_MUTATION_PROBABILITY}.
-     * The weight is mutated by adding a random value drawn from a Gaussian distribution with
-     * mean 0 and standard deviation {@link Hyperparameter#WEIGHT_MUTATION_STD}.
+     * The weight is mutated by adding gaussian noise to every weight in the network chromosome.
      *
-     * @param child The network chromosome to mutate.
+     * @param parent The network chromosome to mutate.
+     * @return The mutated network chromosome.
      */
-    private void mutateWeights(NetworkChromosome child) {
+    public NetworkChromosome mutateWeights(NetworkChromosome parent) {
         throw new UnsupportedOperationException("Implement me!");
     }
 
     /**
      * Toggles the enabled status of a random connection in the given network chromosome.
      *
-     * @param child The network chromosome to mutate.
+     * @param parent The network chromosome to mutate.
+     * @return The mutated network chromosome.
      */
-    private void toggleConnection(NetworkChromosome child) {
+    public NetworkChromosome toggleConnection(NetworkChromosome parent) {
         throw new UnsupportedOperationException("Implement me!");
     }
 

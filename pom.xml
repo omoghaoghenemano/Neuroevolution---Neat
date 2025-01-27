@@ -252,7 +252,6 @@
                         <param>de.uni_passau.fim.se2.sbse.neat.mutation.Mutation</param>
 
                         <param>de.uni_passau.fim.se2.sbse.neat.utils.Randomness</param>
-                        <param>de.uni_passau.fim.se2.sbse.neat.utils.Hyperparameter</param>
                     </excludedClasses>
                     <targetTests>
                         <param>de.uni_passau.fim.se2.sbse.neat.chromosomes.*Test</param>
