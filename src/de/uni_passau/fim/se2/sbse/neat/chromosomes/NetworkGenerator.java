@@ -7,7 +7,7 @@ import java.util.*;
 import static java.util.Objects.requireNonNull;
 
 /**
- * Creates fully connected feed-forward neural networks consisting of one input and one hidden layer.
+ * Creates fully connected feed-forward neural networks consisting of one input and one output layer.
  */
 public class NetworkGenerator {
 
