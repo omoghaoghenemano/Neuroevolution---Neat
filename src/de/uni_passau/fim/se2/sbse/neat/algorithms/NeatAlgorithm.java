@@ -89,7 +89,7 @@ public class NeatAlgorithm implements Neuroevolution {
 
             for (ChromesomeToGroup group : population) {
                 for (NetworkChromosome candidates : group.getCandidate()) {
-                    double fitness = environment.evaluate(candidates);
+                    double fitness = testEnvironment.evaluate(candidates);
                     candidates.setFitness(fitness);
                 }
                 group.calculateAverageFitness();
