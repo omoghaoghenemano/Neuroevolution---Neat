@@ -23,10 +23,10 @@ public class NeatAlgorithm implements Neuroevolution {
     private final List<ChromesomeToGroup> population;
     private final NeatMutation mutation;
     private final int maximumGenerations;
-    private final Environment environment;
+    private final Environment testEnvironment;
 
   
-    public NeatAlgorithm(int populationSize, int maximumGenerations, Environment environment) {
+    public NeatAlgorithm(int populationSize, int maximumGenerations, Environment testEnvironment) {
         this.populationSize = populationSize;
         this.random = Randomness.random();
         this.innovations = new HashSet<>();
@@ -34,7 +34,7 @@ public class NeatAlgorithm implements Neuroevolution {
         this.population = new ArrayList<>();
         this.maximumGenerations = maximumGenerations;
         this.crossover = new NeatCrossover(random);
-        this.environment = environment;
+        this.testEnvironment = testEnvironment;
     }
 
    
@@ -73,8 +73,8 @@ public class NeatAlgorithm implements Neuroevolution {
     public Agent solve(Environment environment) {
         NetworkGenerator generateNetwork = new NetworkGenerator(
                 innovations,
-                environment.stateSize(),
-                environment.actionInputSize(),
+                testEnvironment.stateSize(),
+                testEnvironment.actionInputSize(),
                 random);
 
         for (int i = 0; i < populationSize; i++) {
