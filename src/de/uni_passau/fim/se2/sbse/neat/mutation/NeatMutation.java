@@ -65,7 +65,7 @@ public class NeatMutation implements Mutation<NetworkChromosome> {
         double  addingProbability  = 0.03;
         double addingConnectionProbability = 0.05;
         double mutateWeightsProbability = 0.8;
-        double toggleConnectionProbability = 0.2;
+        double toggleConnectionProbability = 0.1;
 
         if (random.nextDouble() < addingProbability) {
             return addNeuron(parent);
