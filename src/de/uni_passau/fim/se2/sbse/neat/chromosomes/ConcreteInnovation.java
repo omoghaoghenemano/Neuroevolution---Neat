@@ -15,6 +15,9 @@ public class ConcreteInnovation implements Innovation {
         this.goalId = goalId;
         this.derivedNumber = derivedNumber;
     }
+    public int getderivedNumber() {
+        return derivedNumber;
+    }
 
     public int getOriginId() {
         return originId;
@@ -24,9 +27,7 @@ public class ConcreteInnovation implements Innovation {
         return goalId;
     }
 
-    public int getderivedNumber() {
-        return derivedNumber;
-    }
+   
 
     @Override
     public int hashCode() {
