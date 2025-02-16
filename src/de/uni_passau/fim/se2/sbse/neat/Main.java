@@ -24,35 +24,35 @@ public class Main implements Callable<Integer> {
             converter = TaskConverter.class,
             required = true
     )
-    private Tasks task;
+    public Tasks task;
 
     @CommandLine.Option(
             names = {"-p", "--population-size"},
             description = "The size of the population.",
             defaultValue = "50"
     )
-    private int populationSize;
+    public int populationSize;
 
     @CommandLine.Option(
             names = {"-g", "--max-generations"},
             description = "The maximum number of generations to run the algorithm for.",
             defaultValue = "50"
     )
-    private int maxGenerations;
+    public int maxGenerations;
 
     @CommandLine.Option(
             names = {"-r", "--repetitions"},
             description = "The number of times to repeat the task.",
             defaultValue = "30"
     )
-    private int repetitions;
+    public int repetitions;
 
     @CommandLine.Option(
             names = {"-v", "--visualise"},
             description = "Visualises the behaviour of a trained agent in the specified task.",
             defaultValue = "false"
     )
-    private boolean visualise;
+    public boolean visualise;
 
     @CommandLine.Option(
             names = {"-s", "--seed"},
@@ -67,10 +67,10 @@ public class Main implements Callable<Integer> {
         System.exit(exitCode);
     }
 
-    private final List<Agent> solutions = new ArrayList<>();
-    private final List<Integer> generations = new ArrayList<>();
-    private final List<Boolean> successes = new ArrayList<>();
-    private final List<Long> times = new ArrayList<>();
+    public final List<Agent> solutions = new ArrayList<>();
+    public final List<Integer> generations = new ArrayList<>();
+    public final List<Boolean> successes = new ArrayList<>();
+    public final List<Long> times = new ArrayList<>();
 
 
     /**
@@ -105,7 +105,7 @@ public class Main implements Callable<Integer> {
     /**
      * Solves the specified reinforcement learning task using the Neat algorithm.
      */
-    private void solveTask() {
+    public void solveTask() {
         Environment environment = initialiseTask();
         Neuroevolution neat = initialiseNeat(populationSize, maxGenerations);
 
@@ -121,7 +121,7 @@ public class Main implements Callable<Integer> {
     /**
      * Prints the results of the evaluation.
      */
-    private void printResults() {
+    public void printResults() {
         long successfulRepetitions = successes.stream().filter(Boolean::booleanValue).count();
         double averageGenerations = generations.stream().mapToInt(Integer::intValue).average().orElseThrow();
         double maxGenerations = generations.stream().mapToInt(Integer::intValue).max().orElseThrow();
@@ -153,7 +153,7 @@ public class Main implements Callable<Integer> {
      *
      * @return The initialised task.
      */
-    private Environment initialiseTask() {
+    public Environment initialiseTask() {
         return switch (task) {
             case Tasks.XOR -> new XOR();
             case Tasks.CARTPOLE -> new SinglePoleBalancing(10, false, Randomness.random());

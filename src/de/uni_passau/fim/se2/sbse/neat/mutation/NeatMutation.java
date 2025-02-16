@@ -291,7 +291,7 @@ public class NeatMutation implements Mutation<NetworkChromosome> {
         return new NetworkChromosome(new HashMap<>(parent.getLayers()), newConnections);
     }
 
-    private double calculateDepth(NetworkChromosome geneNetwork, NeuronGene neuronGene) {
+    public double calculateDepth(NetworkChromosome geneNetwork, NeuronGene neuronGene) {
         
         for (Map.Entry<Double, List<NeuronGene>> entry : geneNetwork.getLayers().entrySet()) {
             if (entry.getValue().contains(neuronGene)) {
