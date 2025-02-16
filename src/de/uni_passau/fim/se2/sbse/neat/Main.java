@@ -1,5 +1,6 @@
 package de.uni_passau.fim.se2.sbse.neat;
 
+import de.uni_passau.fim.se2.sbse.neat.algorithms.NeatAlgorithm;
 import de.uni_passau.fim.se2.sbse.neat.algorithms.Neuroevolution;
 import de.uni_passau.fim.se2.sbse.neat.chromosomes.Agent;
 import de.uni_passau.fim.se2.sbse.neat.environments.Environment;
@@ -143,7 +144,7 @@ public class Main implements Callable<Integer> {
      * @return The initialised Neat algorithm.
      */
     public static Neuroevolution initialiseNeat(int populationSize, int maxGenerations) {
-        throw new UnsupportedOperationException("Implement me!");
+        return new NeatAlgorithm(populationSize, maxGenerations);
     }
 
     /**
