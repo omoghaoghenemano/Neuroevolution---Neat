@@ -9,6 +9,12 @@ public class ConnectionGene {
     //  Please do not change the signature of the given constructor and methods and ensure to implement them.
     //  You can add additional methods, fields, and constructors if needed.
 
+    private final NeuronGene sourceNeuronGene;
+    private final NeuronGene targetNeuronGene;
+    private final double weight;
+    private final boolean enabled;
+    private final int innovationNumber;
+
     /**
      * Creates a new connection gene with the given source and target neuron, weight, enabled flag, and innovation number.
      *
@@ -19,26 +25,33 @@ public class ConnectionGene {
      * @param innovationNumber The innovation number of the connection serving as identifier.
      */
     public ConnectionGene(NeuronGene sourceNeuronGene, NeuronGene targetNeuronGene, double weight, boolean enabled, int innovationNumber) {
-        throw new UnsupportedOperationException("Implement me!");
+
+        this.sourceNeuronGene = sourceNeuronGene;
+        this.targetNeuronGene = targetNeuronGene;
+        this.weight = weight;
+        this.enabled = enabled;
+        this.innovationNumber = innovationNumber;
     }
 
     public NeuronGene getSourceNeuron() {
-        throw new UnsupportedOperationException("Implement me!");
+
+        return sourceNeuronGene;
     }
 
     public NeuronGene getTargetNeuron() {
-        throw new UnsupportedOperationException("Implement me!");
+
+        return targetNeuronGene;
     }
 
     public double getWeight() {
-        throw new UnsupportedOperationException("Implement me!");
+            return weight;
     }
 
     public boolean getEnabled() {
-        throw new UnsupportedOperationException("Implement me!");
+        return enabled;
     }
 
     public int getInnovationNumber() {
-        throw new UnsupportedOperationException("Implement me!");
+        return innovationNumber;
     }
 }
