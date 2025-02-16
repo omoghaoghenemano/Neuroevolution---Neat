@@ -63,7 +63,7 @@ class MainTest {
         assertTrue(main.initialiseTask() instanceof SinglePoleBalancing);
     }
 
-   
+
 
     @Test
     void testCallWithError() throws Exception {
