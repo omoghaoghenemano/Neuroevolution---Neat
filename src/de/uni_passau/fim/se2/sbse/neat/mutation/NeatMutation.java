@@ -29,10 +29,7 @@ public class NeatMutation implements Mutation<NetworkChromosome> {
      */
     private final Set<Innovation> innovations;
 
-    private static final double ADD_NEURON_PROBABILITY = 0.03;
-    private static final double ADD_CONNECTION_PROBABILITY = 0.05;
-    private static final double MUTATE_WEIGHTS_PROBABILITY = 0.8;
-    private static final double TOGGLE_CONNECTION_PROBABILITY = 0.1;
+
 
     /**
      * Constructs a new NeatMutation with the given random number generator and the list of innovations that occurred so far in the search.
@@ -65,18 +62,23 @@ public class NeatMutation implements Mutation<NetworkChromosome> {
   
     @Override
     public NetworkChromosome apply(NetworkChromosome parent) {
-        if (random.nextDouble() < ADD_NEURON_PROBABILITY) {
+        double  addingProbability  = 0.03;
+        double addingConnectionProbability = 0.05;
+        double mutateWeightsProbability = 0.8;
+        double toggleConnectionProbability = 0.2;
+
+        if (random.nextDouble() < addingProbability) {
             return addNeuron(parent);
         }
-        if (random.nextDouble() < ADD_CONNECTION_PROBABILITY) {
+        if (random.nextDouble() < addingConnectionProbability) {
             return addConnection(parent);
         }
 
         NetworkChromosome mutated = parent;
-        if (random.nextDouble() < MUTATE_WEIGHTS_PROBABILITY) {
+        if (random.nextDouble() < mutateWeightsProbability) {
             mutated = mutateWeights(mutated);
         }
-        if (random.nextDouble() < TOGGLE_CONNECTION_PROBABILITY) {
+        if (random.nextDouble() < toggleConnectionProbability) {
             mutated = toggleConnection(mutated);
         }
         return mutated;
